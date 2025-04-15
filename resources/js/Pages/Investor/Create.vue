@@ -19,7 +19,22 @@ const submit = () => {
     <Head title="Add Investor" />
     <PageLayout>
         <div class="max-w-2xl mx-auto">
-            <h1 class="text-3xl font-bold p-4 text-white mb-8">📝 Create New Investor</h1>
+
+            <div class="mb-6 pt-5 flex justify-between items-center">
+                <h1 class="text-3xl font-bold text-white">📝 Create New Investor</h1>
+
+                <button
+                    @click="$inertia.visit('/investors')"
+                    type="button"
+                    class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg transition font-medium"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Back to Investors
+                </button>
+            </div>
+
 
             <form @submit.prevent="submit" class="space-y-6 bg-white p-4 rounded-2xl shadow-md border border-gray-200">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
