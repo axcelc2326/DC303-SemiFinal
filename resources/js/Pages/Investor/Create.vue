@@ -23,7 +23,6 @@ const submit = () => {
 
             <form @submit.prevent="submit" class="space-y-6 bg-white p-4 rounded-2xl shadow-md border border-gray-200">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- First Name -->
                     <div>
                         <label class="block text-sm font-medium text-black mb-1">First Name</label>
                         <input
@@ -34,7 +33,6 @@ const submit = () => {
                         <p v-if="form.errors.first_name" class="text-red-500 text-xs mt-1">{{ form.errors.first_name }}</p>
                     </div>
 
-                    <!-- Last Name -->
                     <div>
                         <label class="block text-sm font-medium text-black mb-1">Last Name</label>
                         <input
@@ -45,7 +43,6 @@ const submit = () => {
                         <p v-if="form.errors.last_name" class="text-red-500 text-xs mt-1">{{ form.errors.last_name }}</p>
                     </div>
 
-                    <!-- Phone -->
                     <div>
                         <label class="block text-sm font-medium text-black mb-1">Phone</label>
                         <input
@@ -56,7 +53,6 @@ const submit = () => {
                         <p v-if="form.errors.phone" class="text-red-500 text-xs mt-1">{{ form.errors.phone }}</p>
                     </div>
 
-                    <!-- Address -->
                     <div>
                         <label class="block text-sm font-medium text-black mb-1">Address</label>
                         <input
@@ -68,7 +64,6 @@ const submit = () => {
                     </div>
                 </div>
 
-                <!-- Investment Type -->
                 <div>
                     <label class="block text-sm font-medium text-black mb-1">Investment Type</label>
                     <select
@@ -83,7 +78,6 @@ const submit = () => {
                     <p v-if="form.errors.investment_type" class="text-red-500 text-xs mt-1">{{ form.errors.investment_type }}</p>
                 </div>
 
-                <!-- Submit -->
                 <div class="pt-4">
                     <button
                         type="submit"

@@ -24,7 +24,6 @@ function goToCreatePage() {
             </button>
         </div>
 
-        <!-- Investor Cards -->
         <div class="grid grid-cols-1 p-4 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div
                 v-for="investor in investors.data"
@@ -42,10 +41,9 @@ function goToCreatePage() {
             </div>
         </div>
 
-        <!-- Pagination -->
         <div class="mt-10 pb-5 flex justify-center">
             <div class="flex gap-3">
-                <!-- First -->
+
                 <button
                     :disabled="investors.current_page === 1"
                     @click="$inertia.visit(investors.first_page_url)"
@@ -56,7 +54,6 @@ function goToCreatePage() {
                     ⏮️ First
                 </button>
 
-                <!-- Previous -->
                 <button
                     :disabled="!investors.prev_page_url"
                     @click="$inertia.visit(investors.prev_page_url)"
@@ -67,7 +64,6 @@ function goToCreatePage() {
                     ⬅️ Previous
                 </button>
 
-                <!-- Next -->
                 <button
                     :disabled="!investors.next_page_url"
                     @click="$inertia.visit(investors.next_page_url)"
@@ -78,7 +74,6 @@ function goToCreatePage() {
                     Next ➡️
                 </button>
 
-                <!-- Last -->
                 <button
                     :disabled="investors.current_page === investors.last_page"
                     @click="$inertia.visit(investors.last_page_url)"
