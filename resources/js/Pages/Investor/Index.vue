@@ -24,7 +24,7 @@ function goToCreatePage() {
             </button>
         </div>
 
-        <div class="grid grid-cols-1 p-4 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 p-4 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div
                 v-for="investor in investors.data"
                 :key="investor.id"
